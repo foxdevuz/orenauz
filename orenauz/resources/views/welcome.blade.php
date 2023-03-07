@@ -1,3 +1,0 @@
-<x-main>
-
-</x-main>
