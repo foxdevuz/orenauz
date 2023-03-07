@@ -1,0 +1,59 @@
+@font-face {
+  font-family: "ttcommons";
+  src: url(public_path("/fonts/TT Commons Medium.otf"));
+}
+.logo-section {
+  background-color: #0B2033;
+  width: 100%;
+  display: grid;
+  column-gap: 10px;
+  grid-template-columns: auto auto;
+}
+.logo-section .icons {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding-left: 10px;
+}
+.logo-section .icons i {
+  font-size: 1.2rem;
+  color: #fff;
+  cursor: pointer;
+}
+.logo-section .icons .theme {
+  margin-left: 10px;
+  position: relative;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.logo-section .icons .theme i {
+  position: absolute;
+}
+.logo-section .icons .search {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+}
+.logo-section .logo img {
+  width: 150px;
+}
+
+.nav-items ul {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  width: 100%;
+}
+.nav-items ul li {
+  width: max-content;
+  list-style-type: none;
+  border-right: 1px solid rgba(46, 46, 46, 0.4666666667);
+}
+.nav-items ul li a {
+  text-decoration: none;
+  color: #0B2033;
+  font-family: "ttcommons";
+}
+
+/*# sourceMappingURL=index.css.map */

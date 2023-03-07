@@ -1,0 +1,66 @@
+// fonts
+@font-face {
+    font-family: 'ttcommons';
+    src: url(public_path('/fonts/TT Commons Medium.otf'));
+  }
+
+$main-color: #0B2033;
+$red: #E13300;
+
+.logo-section {
+    background-color: $main-color;
+    width: 100%;
+    display: grid;
+    column-gap: 10px;
+    grid-template-columns: auto auto;
+    .icons {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        padding-left: 10px;
+        i {
+            font-size: 1.2rem;
+            color: #fff;
+            cursor: pointer;
+        }
+        .theme {
+            margin-left: 10px;
+            position: relative;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            i {
+                position: absolute;
+
+            }
+        }
+        .search {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            margin-left: 20px;
+        }
+    }
+    .logo {
+        img {
+            width: 150px;
+        }
+    }
+}
+.nav-items {
+   ul {
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        width: 100%;
+        li {
+            width: max-content;
+            list-style-type: none;
+            border-right: 1px solid #2e2e2e77;
+            a {
+                text-decoration: none;
+                color: $main-color;
+                font-family: 'ttcommons';
+            }
+        }
+   }
+}
