@@ -29,8 +29,8 @@
             <a href="/"><img src="./images/logo.png" alt="Logo"></a>
         </div>
     </nav>
-    <nav class="nav-items">
-        <ul>
+    <nav>
+        <ul class="nav-items">
             <li><a href="#">Asosiy bo'lim</a></li>
             <li><a href="#">Biznes</a></li>
             <li><a href="#">Texnalogiyalar</a></li>
