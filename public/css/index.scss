@@ -105,6 +105,7 @@ $red: #E13300;
     grid-template-columns: 40% 30% 30%;
     .item {
         padding: 10px;
+        border: 1px solid #A6A6A6;
     }
     .lastest {
         img {
@@ -126,6 +127,7 @@ $red: #E13300;
 }
 .fast {
     .fast-card {
+        padding-right: 10px;
         width: 100%;
         margin: auto;
     }
@@ -133,31 +135,31 @@ $red: #E13300;
         display: flex;
         justify-content: start;
         align-items: center;
+        padding-right: 10px
     }
 }
 .pupular-news-card {
-    margin: 15px 0;
+    margin-bottom: 50px;
     display: flex;
     justify-content: space-between;
-    .img {
-        img {
-            width: 100%;
-        }
-    }
     .body {
         display: grid;
         grid-template-columns: auto auto;
         width: 60%;
-        .news-title {
-            font-style: 1.3rem !important;
+        .news-title, .more {
             grid-column-start: 1;
             grid-column-end: 3;
+            a {
+                font-size: 1.12rem !important;
+            }
         }
     }
     .image {
         width: 55%;
+        padding-left: 10px;
         img {
             width: 100%;
+            height: 150px;
         }
     }
 }
