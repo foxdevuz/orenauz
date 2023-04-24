@@ -10,6 +10,16 @@
 a {
     text-decoration: none;
 }
+span.line_bottom_nav {
+    display: block;
+    width: 100%;
+    color: inherit;
+    border: 0;
+    border-top: var(--bs-border-width) solid;
+    opacity: .25;
+    margin: 0;
+    padding: 0 15px ;
+}
 $main-color: #0B2033;
 $red: #E13300;
 // required, need
@@ -89,12 +99,15 @@ $red: #E13300;
     display: flex;
     justify-content: start;
     width: 100%;
+    height: 40px;
+    vertical-align: middle;
     li {
         width: max-content;
         list-style-type: none;
         width: 15%;
         text-align: center;
         padding: 10px 0;
+        vertical-align: middle;
         a {
             text-decoration: none;
             color: $main-color;

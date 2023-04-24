@@ -33,7 +33,7 @@
                     <a href="/"><img src="./images/logo.png" alt="Logo"></a>
                 </div>
             </nav>
-            <nav>
+            <nav style="margin-bottom:0px;">
                 <ul class="nav-items">
                     <li><a href="#">Asosiy bo'lim</a></li>
                     <li><a href="#">Biznes</a></li>
@@ -41,6 +41,7 @@
                     <li><a href="#">Insayder</a></li>
                 </ul>
             </nav>
+            <span class="line_bottom_nav"></span>
         </header>
         <div class="container-lg">
             {{ $slot }}

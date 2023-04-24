@@ -5,7 +5,7 @@
         <p class="pt-3"> <i class="fa-regular fa-calendar"></i> 22/02/2022</p>
         <x-news-title>Ilon Mask Trampni twitter sahifaini blokdan chiqardi</x-news-title>
         <x-news-little-text>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatum, odio. Dolores laudantium ipsum placeat nesciunt delectus iure explicabo facere qui.</x-news-little-text>
-         <x-read-more>Ko'proq o'qish...</x-read-more>
+        <x-read-more>Ko'proq o'qish...</x-read-more>
     </div>
 
     <div class="item fast">

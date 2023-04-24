@@ -10,6 +10,17 @@ a {
   text-decoration: none;
 }
 
+span.line_bottom_nav {
+  display: block;
+  width: 100%;
+  color: inherit;
+  border: 0;
+  border-top: var(--bs-border-width) solid;
+  opacity: 0.25;
+  margin: 0;
+  padding: 0 15px;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -21,7 +32,8 @@ a {
   background-color: #0B2033;
   width: 100%;
   display: grid;
-  column-gap: 10px;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
   grid-template-columns: auto auto;
 }
 .logo-section .icons {
@@ -84,13 +96,17 @@ a {
   display: flex;
   justify-content: start;
   width: 100%;
+  height: 40px;
+  vertical-align: middle;
 }
 .nav-items li {
+  width: -moz-max-content;
   width: max-content;
   list-style-type: none;
   width: 15%;
   text-align: center;
   padding: 10px 0;
+  vertical-align: middle;
 }
 .nav-items li a {
   text-decoration: none;
@@ -267,6 +283,4 @@ footer .social-media {
 }
 footer .social-media a {
   color: #C2CEEA;
-}
-
-/*# sourceMappingURL=index.css.map */
+}/*# sourceMappingURL=index.css.map */
