@@ -10,6 +10,7 @@
 a {
     text-decoration: none;
 }
+
 span.line_bottom_nav {
     display: block;
     width: 100%;
@@ -123,7 +124,7 @@ $red: #E13300;
 // main section
 .main-section {
     display: grid;
-    grid-template-columns: 40% 30% 30%;
+    grid-template-columns: 38% 30% 32%;
     .item {
         padding: 10px;
     }
@@ -133,7 +134,7 @@ $red: #E13300;
             width: 100%;
         }
     }
-   
+
     .little-text {
         line-height: 20px;
         font-size: 1.07rem;
@@ -203,7 +204,7 @@ $red: #E13300;
             width: 75%;
         }
     }
-    
+
     .images {
         display: grid;
         grid-template-columns: auto auto;
@@ -276,7 +277,7 @@ footer {
 
     .body {
         display: grid;
-        grid-template-columns: auto auto; 
+        grid-template-columns: auto auto;
     }
     .item-1 {
         // width: 100%;
@@ -288,13 +289,12 @@ footer {
         }
     }
     .social-media {
-        display: grid;
-        grid-template-columns: auto auto;
-        gap: 20px;
         color: #C2CEEA;
         font-size: 1.5rem;
-        a {
-            color: #C2CEEA;
-        }
+        cursor: pointer;
+    }
+    .social-media:hover {
+        transition: all 0.3s;
+        color: #fff;
     }
 }

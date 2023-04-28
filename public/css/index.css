@@ -32,8 +32,7 @@ span.line_bottom_nav {
   background-color: #0B2033;
   width: 100%;
   display: grid;
-  -moz-column-gap: 10px;
-       column-gap: 10px;
+  column-gap: 10px;
   grid-template-columns: auto auto;
 }
 .logo-section .icons {
@@ -100,7 +99,6 @@ span.line_bottom_nav {
   vertical-align: middle;
 }
 .nav-items li {
-  width: -moz-max-content;
   width: max-content;
   list-style-type: none;
   width: 15%;
@@ -121,7 +119,7 @@ span.line_bottom_nav {
 
 .main-section {
   display: grid;
-  grid-template-columns: 40% 30% 30%;
+  grid-template-columns: 38% 30% 32%;
 }
 .main-section .item {
   padding: 10px;
@@ -275,12 +273,13 @@ footer .item-1 .about {
   font-size: 1.2rem;
 }
 footer .social-media {
-  display: grid;
-  grid-template-columns: auto auto;
-  gap: 20px;
   color: #C2CEEA;
   font-size: 1.5rem;
+  cursor: pointer;
 }
-footer .social-media a {
-  color: #C2CEEA;
-}/*# sourceMappingURL=index.css.map */
+footer .social-media:hover {
+  transition: all 0.3s;
+  color: #fff;
+}
+
+/*# sourceMappingURL=index.css.map */

@@ -14,6 +14,9 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
         {{-- my css --}}
         <link rel="stylesheet" href="/css/index.css">
+        {{-- dark theme css --}}
+        <link rel="stylesheet" href="/css/dark.css">
+        <link rel="stylesheet" href="/css/extra.css">
     </head>
 
     <body>
@@ -25,8 +28,8 @@
                         <i class="fa-solid fa-magnifying-glass"></i>
                     </div>
                     <div class="theme">
-                        <i class="fa-solid fa-sun"></i>
-                        <i class="fa-solid fa-moon"></i>
+                        <i class="fa-solid fa-sun" id="ligth"></i>
+                        <i class="fa-solid fa-moon" id="dark"></i>
                     </div>
                 </div>
                 <div class="logo">
@@ -67,14 +70,14 @@
                     <div class="item-1">
                         <p class="about">
                             <span class="fs-3">Orena.uz</span> - Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur consequatur
-                            repellendus natus commodi consectetur nam atque quia pariatur amet, 
+                            repellendus natus commodi consectetur nam atque quia pariatur amet,
                         </p>
                     </div>
                     <div class="social-media">
-                        <span><i class="fa-brands fa-telegram"></i> <a href="#">Telegram</a></span>
-                        <span><i class="fa-brands fa-instagram"></i> <a href="#">Instagram</a></span>
-                        <span><i class="fa-brands fa-facebook"></i> <a href="#">Facebook</a></span>
-                        <span><i class="fa-brands fa-twitter"></i> <a href="#">Twitter</a></span>
+                        <span><i class="fa-brands fa-telegram"></i></span>
+                        <span><i class="fa-brands fa-instagram"></i></span>
+                        <span><i class="fa-brands fa-facebook"></i></span>
+                        <span><i class="fa-brands fa-twitter"></i></span>
                     </div>
                 </div>
             </div>
@@ -98,6 +101,8 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"
             integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous">
         </script>
+        {{-- my js --}}
+        <script src="/js/main.js"></script>
     </body>
 
 </html>

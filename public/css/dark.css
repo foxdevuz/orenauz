@@ -1,0 +1,19 @@
+body.dark {
+    background-color:#0F0E0E;
+    color: #fff;
+}
+body.dark .news-title a {
+    color: #fff;
+}
+body.dark .more a {
+    color: #0085D0;
+}
+body.dark .category a {
+    color: #c5c5c5;
+}
+body.dark .nav-items a {
+    color: #c5c5c5;
+}
+body.dark .section-title {
+    color: #c5c5c5;
+}
