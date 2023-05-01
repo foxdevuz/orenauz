@@ -8,13 +8,13 @@
             </div>
         </div>
         <div class="body">
-            <x-time class="pt-4 fs-5">22/02/2022</x-time>
-            <x-news-title style="font-size: 2rem;">Rasmlar: Suniy Intelekt kundan kunga rivojlanib bormoqda.</x-news-title>
-            <x-news-little-text class="pt-1 fs-5">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe ducimus quae aspernatur, omnis porro officia autem provident doloremque</x-news-little-text>
+            <x-extra.time class="pt-4 fs-5">22/02/2022</x-extra.time>
+            <x-extra.news-title style="font-size: 2rem;">Rasmlar: Suniy Intelekt kundan kunga rivojlanib bormoqda.</x-extra.news-title>
+            <x-extra.news-little-text class="pt-1 fs-5">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe ducimus quae aspernatur, omnis porro officia autem provident doloremque</x-extra.news-little-text>
         </div>
     </div>
     <div class="extra">
-       <x-card-extra/>
-       <x-card-extra/>
+       <x-news.card-extra/>
+       <x-news.card-extra/>
     </div>
 </div>

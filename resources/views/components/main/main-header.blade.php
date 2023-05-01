@@ -17,36 +17,16 @@
         {{-- dark theme css --}}
         <link rel="stylesheet" href="/css/dark.css">
         <link rel="stylesheet" href="/css/extra.css">
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     </head>
 
     <body>
         {{-- start header --}}
-        <header>
-            <nav class="logo-section">
-                <div class="icons">
-                    <div class="search">
-                        <i class="fa-solid fa-magnifying-glass"></i>
-                    </div>
-                    <div class="theme">
-                        <i class="fa-solid fa-sun" id="ligth"></i>
-                        <i class="fa-solid fa-moon" id="dark"></i>
-                    </div>
-                </div>
-                <div class="logo">
-                    <a href="/"><img src="./images/logo.png" alt="Logo"></a>
-                </div>
-            </nav>
-            <nav style="margin-bottom:0px;">
-                <ul class="nav-items">
-                    <li><a href="#">Asosiy bo'lim</a></li>
-                    <li><a href="#">Biznes</a></li>
-                    <li><a href="#">Texnalogiyalar</a></li>
-                    <li><a href="#">Insayder</a></li>
-                </ul>
-            </nav>
-            <span class="line_bottom_nav"></span>
-        </header>
+        <x-main.header/>
         <div class="container-lg">
+            <x-main.swipper/>
             {{ $slot }}
         </div>
         <footer>
@@ -83,18 +63,6 @@
             </div>
         </footer>
 
-
-
-
-
-
-
-
-
-
-
-
-
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
             integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
         </script>
@@ -103,6 +71,10 @@
         </script>
         {{-- my js --}}
         <script src="/js/main.js"></script>
+
+        <script type="module">
+            import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.esm.browser.min.js';
+        </script>
     </body>
 
 </html>

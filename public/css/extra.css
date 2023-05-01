@@ -1,3 +1,22 @@
 .none-dsp { 
     display: none; 
 }
+.extra-for-more-read {
+    border: 2px solid #0085D0;
+    border-radius: 5px;
+    width: max-content;
+    padding: 1px 3px;
+    font-size: 0.8rem;
+    margin: 0;
+}
+
+.extra-for-titile a {
+    font-size: 1rem;
+    margin: 0;
+}
+.nav-itm-light {
+    color: #fff !important;
+}
+.nav-itm-dark {
+    color: #000 !important;
+}

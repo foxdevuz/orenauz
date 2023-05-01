@@ -1,5 +1,5 @@
-<x-main-header>
-    <x-main-section/>
-    <x-second/>
-    <x-all/>
-</x-main-header>
+<x-main.main-header>
+    <x-main.main-section/>
+    <x-main.second/>
+    <x-main.all/>
+</x-main.main-header>

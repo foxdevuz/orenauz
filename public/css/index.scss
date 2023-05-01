@@ -23,7 +23,6 @@ span.line_bottom_nav {
 }
 $main-color: #0B2033;
 $red: #E13300;
-// required, need
 * {
     margin: 0;
     padding: 0;
@@ -62,6 +61,10 @@ $red: #E13300;
             display: flex;
             align-items: center;
             margin-left: 20px;
+            i:nth-child(1) {
+                margin:0 8px 0 0;
+                display: none;
+            }
         }
     }
     .logo {
@@ -257,7 +260,6 @@ $red: #E13300;
 footer {
     background-color: $main-color;
     width: 100%;
-    height: 200px;
     .top {
         ul {
             display: flex;
@@ -292,9 +294,146 @@ footer {
         color: #C2CEEA;
         font-size: 1.5rem;
         cursor: pointer;
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        gap: 5px;
+            span:hover {
+                transition: all 0.3s;
+                color: #fff;
+            }
     }
-    .social-media:hover {
-        transition: all 0.3s;
-        color: #fff;
+}
+
+
+// Swipper for only mobile screen
+.mySwiper {
+    margin-top: 15px;
+    width: 94%;
+    display: none !important;
+    .swipper_image {
+        width: 100%;
+    }
+    .swiper-button-next, .swiper-button-prev {
+        display: none !important;
+    }
+    .backdrop {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #0b203363;
+    }
+}
+.swiper-slide {
+    position: relative;
+    height: 100%;
+    .content_text {
+        position: absolute;
+        z-index: 999;
+        top: 80%;
+        left: 18%;
+        transform: translate(-18%, -80%);
+    }
+}
+
+// RWD
+@media only screen and (max-width: 480px) {
+    .fs-3 {
+        font-size: 1.1rem !important;
+    }
+    .pupular-news-card .body {
+        display: grid;
+        grid-template-columns: 48%;
+        width: 78%;
+    }
+    .logo-section {
+        .icons {
+            .search {
+                i:nth-child(1) {
+                    margin:0 8px 0 0;
+                    display: block;
+                }
+            }
+        }
+
+    }
+    .mySwiper {
+        display: block !important;
+    }
+    .offcanvas-nav-items {
+        display: flex;
+        flex-wrap: wrap;
+        li {
+            display: block;
+            width: 100%;
+            list-style-type: none;
+            a:hover {
+                opacity: 0.8;
+                transition: all 0.3s;
+            }
+        }
+    }
+    .nav-items, .lastest {
+        display: none;
+    }
+    .main-section, .all {
+        display: grid;
+        grid-template-columns: auto;
+        gap: 5px;
+    }
+    .second {
+        display: grid;
+        grid-template-columns: auto;
+        .images {
+            .extra-imaes {
+                display: grid;
+                gap: 0;
+            }
+        }
+        .extra {
+            margin-top: 50px;
+            .card-extra {
+                .image {
+                    display: none;
+                }
+            }
+        }
+    }
+    footer {
+        .top {
+            display: flex;
+            flex-wrap: wrap;
+            li {
+                width: 100%;
+                display: block;
+                a {
+                    font-size: 1.2rem;
+                }
+            }
+        }
+        .body {
+            display: grid;
+            grid-template-columns: auto;
+            width: 100%;
+            .item-1 {
+                .about {
+                    width: 100%;
+                    font-size: 0.8rem;
+                }
+            }
+        }
+        .social-media {
+            display: none;
+        }
+    }
+    .offcanvas-body {
+        .social-media {
+            display: flex;
+            justify-content: start;
+            span {
+                margin-left: 10px;
+            }
+        }
     }
 }
