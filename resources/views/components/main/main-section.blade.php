@@ -1,4 +1,5 @@
 <div class="main-section">
+    <x-main.swipper/>
     <div class="item lastest">
         <x-extra.section-title>So'ngi</x-extra.section-title>
         <img src="/images/testImage.jpg" alt="News Image">

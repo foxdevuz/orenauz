@@ -14,19 +14,23 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
         {{-- my css --}}
         <link rel="stylesheet" href="/css/index.css">
+        <link rel="stylesheet" href="/css/more.css">
         {{-- dark theme css --}}
         <link rel="stylesheet" href="/css/dark.css">
         <link rel="stylesheet" href="/css/extra.css">
 
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
         <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+        {{-- sliderjs --}}
+        <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
     </head>
 
     <body>
         {{-- start header --}}
         <x-main.header/>
         <div class="container-lg">
-            <x-main.swipper/>
             {{ $slot }}
         </div>
         <footer>
@@ -74,6 +78,8 @@
 
         <script type="module">
             import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.esm.browser.min.js';
+            import Splide from '@splidejs/splide';
+            import { AutoScroll } from '@splidejs/splide-extension-auto-scroll';
         </script>
     </body>
 
