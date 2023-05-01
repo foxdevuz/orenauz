@@ -86,13 +86,3 @@ let swiper = new Swiper(".mySwiper", {
     },
 });
 
-// sliderjs
-new Splide( '.splide', {
-    type   : 'loop',
-    drag   : 'free',
-    snap   : true,
-    perPage: 3,
-    autoScroll: {
-        speed: 1,
-    },
-}).mount();
