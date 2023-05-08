@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\Category;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -19,6 +20,7 @@ class PostFactory extends Factory
         return [
             'name'=>fake()->paragraph(),
             'slug'=>fake()->slug(),
+            'category'=> Category::factory()->create(),
             'description'=>fake()->text(),
             'view'=>fake()->numerify(),
         ];

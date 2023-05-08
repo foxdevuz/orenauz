@@ -1,11 +1,9 @@
 <?php
 
+use App\Http\Controllers\PostController;
 use Illuminate\Support\Facades\Route;
 
 
-Route::get('/', function () {
-    return view('welcome');
-});
-Route::get('/news', function () {
-    return view('more');
-});
+Route::get('/', [PostController::class, 'index'])->name('home');
+
+Route::get('/news', [PostController::class, 'show']);
