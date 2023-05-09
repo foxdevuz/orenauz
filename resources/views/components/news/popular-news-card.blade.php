@@ -1,9 +1,12 @@
+@props(['post'])
 <div class="pupular-news-card">
     <div class="body">
-        <x-main.category>Biznes</x-category>
-        <x-extra.time>22/02/2022</x-extra.time>
-        <p class="news-title extra"><a href="#">Ilon Mask Trampni twitter sahifaini blokdan chiqardi</a></p>
-         <x-extra.read-more>Ko'proq o'qish...</x-extra.read-more>
+        <x-main.category>{{ Str::limit($post->category, 7) }}</x-category>
+        <x-extra.time>{{ $post->created_at->format('d/m/Y') }}</x-extra.time>
+        <p class="news-title extra"><a href="#">{{ Str::limit($post->name, 50) }}</a></p>
+        <p class="more">
+            <a href="/news/{{ $post->slug }}">Ko'proq o'qish</a>
+        </p>
     </div>
     <div class="image">
         <img src="/images/testImage.jpg" alt="News Image">

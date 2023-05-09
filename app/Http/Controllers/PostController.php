@@ -11,6 +11,8 @@ class PostController extends Controller
     {
         return view('welcome', [
             'posts'=> Post::latest()->get(),
+            'posts_for_second'=>Post::all()->slice(7),
+            'all_posts'=>Post::query()->paginate(10)
         ]);
     }
 

@@ -1,5 +1,7 @@
+@props(['posts'])
 <div class="all">
-    <x-news.all-card/>
-    <x-news.all-card/>
-    <x-news.all-card/>
- </div>
+    @foreach ($posts as $post)
+        <x-news.all-card :posts="$post"/>        
+    @endforeach
+</div>
+{{ $posts->links('vendor.pagination.bootstrap-5') }}

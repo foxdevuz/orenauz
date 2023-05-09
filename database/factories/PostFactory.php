@@ -20,7 +20,7 @@ class PostFactory extends Factory
         return [
             'name'=>fake()->paragraph(),
             'slug'=>fake()->slug(),
-            'category'=> Category::factory()->create(),
+            'category'=> Category::factory()->create()->name,
             'description'=>fake()->text(),
             'view'=>fake()->numerify(),
         ];
