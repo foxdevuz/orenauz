@@ -10,14 +10,17 @@ class PostController extends Controller
     public function index()
     {
         return view('welcome', [
-            'posts'=> Post::latest()->get(),
+            'posts'=> Post::orderByDesc('id')->get(),
             'posts_for_second'=>Post::all()->slice(7),
             'all_posts'=>Post::query()->paginate(10)
         ]);
     }
 
-    public function show()
+    public function show(Post $post)
     {
-        return view('more');
+        return view('more', [
+            'post'=>$post,
+            'latest'=>Post::orderByDesc('id')->get()
+        ]);
     }
 }

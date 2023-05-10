@@ -2,7 +2,7 @@
 {{-- {{ dd($post) }} --}}
 <div class="fast-card">
     <div class="card-top">
-        <x-main.category>{{ $post->category }}</x-main.category>
+        <x-main.category :link="$post->category">{{ $post->category }}</x-main.category>
         <x-extra.time> {{ $post->created_at->format("d/m/Y") }}</x-extra.time>
     </div>
     <div class="card-body">

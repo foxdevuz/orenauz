@@ -1,7 +1,7 @@
 @props(['post'])
 {{-- {{ dd($post->slug) }} --}}
 <div class="main-section">
-    <x-main.swipper/>
+    <x-main.swipper :posts="$post"/>
     <div class="item lastest">
         <x-extra.section-title>So'ngi</x-extra.section-title>
         <img src="/images/testImage.jpg" alt="News Image">

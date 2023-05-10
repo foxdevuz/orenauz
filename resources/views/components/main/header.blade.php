@@ -14,7 +14,7 @@
             </div>
         </div>
         <div class="logo">
-            <a href="/"><img src="./images/logo.png" alt="Logo"></a>
+            <a href="/"><img src="/images/logo.png" alt="Logo"></a>
         </div>
     </nav>
     <nav style="margin-bottom:0px;">

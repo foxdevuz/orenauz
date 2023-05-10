@@ -1,1 +1,2 @@
-<p {{ $attributes->merge(['class'=>'category'])}}><a href="#">{{ $slot }}</a></p>
+@props(['link'])
+<p {{ $attributes->merge(['class'=>'category'])}}><a href="/category/{{ $link }}">{{ $slot }}</a></p>

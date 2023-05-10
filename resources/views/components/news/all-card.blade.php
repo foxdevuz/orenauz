@@ -5,8 +5,8 @@
     </div>
     <div class="body">
         <div class="top">
-            <x-main.category>{{ $posts->category }}</x-category>
-            <x-extra.time>{{ $posts->cteate_at }}</x-extra.time>
+            <x-main.category :link="$posts->category">{{ $posts->category }}</x-category>
+            <x-extra.time>{{ $posts->created_at->format('d/m/y') }}</x-extra.time>
         </div>
         <x-extra.news-title style="font-size: 1.4rem;">{{ Str::limit($posts->name, 70) }}</x-extra.news-title>
         <x-extra.news-little-text class="fs-6">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe ducimus quae aspernatur, omnis porro officia autem provident doloremque</x-extra.news-little-text>
