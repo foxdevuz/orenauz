@@ -19,7 +19,7 @@
     </nav>
     <nav style="margin-bottom:0px;">
         <ul class="nav-items">
-            <li><a href="#">Asosiy bo'lim</a></li>
+            <li><a href="/">Asosiy bo'lim</a></li>
             <li><a href="#">Biznes</a></li>
             <li><a href="#">Texnalogiyalar</a></li>
             <li><a href="#">Insayder</a></li>
