@@ -11,4 +11,4 @@ Route::get('/', [PostController::class, 'index'])->name('home');
 Route::get('/news/{post:slug}', [PostController::class, 'show']);
 Route::get('/category/{category:name}', [CategoryController::class, 'post']);
 Route::get('/admin', [AdminController::class, 'index'])->name('admin');
-Route::post('/admin', [AdminController::class, 'login']);
+Route::post('/login', [AdminController::class, 'login']);

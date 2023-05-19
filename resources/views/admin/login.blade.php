@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <!-- === Coding by CodingLab | www.codinglabweb.com === -->
 <html lang="en">
@@ -21,11 +20,11 @@
         <div class="forms">
             <div class="form login">
                 <span class="title">Login</span>
-                <form action="/admin" method="POST">
+                <form action="/login" method="POST">
                     <div class="input-field">
-                        <input type="text" name="login" placeholder="Loginni kiriting" required>
+                        <input type="text" name="username" placeholder="Loginni kiriting" required autocomplete="off">
                         <i class="uil uil-envelope icon"></i>
-                        @error('login')
+                        @error('username')
                             <div class="error">{{ $message }}</div>
                         @enderror
                     </div>
