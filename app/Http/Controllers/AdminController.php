@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Admin;
 use Dotenv\Exception\ValidationException;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\ValidationException as ValidationValidationException;
 
 class AdminController extends Controller
@@ -22,16 +24,15 @@ class AdminController extends Controller
         // look for admin 
         if(count($atributes)>1){
             $username = request()->username;
-            $pass = request()->password;
-            $admin = DB::table('admins')
-                            ->select('name','password','username','temporary_teken')
-                            ->where('username','=',$username)
-                            ->where('password', '=', $pass)->exists();
+            $password = request()->password;
+            $admin = Admin::select('name','username','password','temporary_token')
+                    ->where('username','=',$username)
+                    ->first();
                             
-            if($admin){
+            if($admin && Hash::check($password, $admin->password)){
                 return redirect('/admin/dashboard');
             }
-            return redirect()->back()->withErrors(['username'=>"Login yoki parol xato!",'password'=>"Login yoki parol xato!",]);
+            return back()->with('error','Login yoki parol xato. Iltimos qayta urunib ko\'ring');
         }
 
     }

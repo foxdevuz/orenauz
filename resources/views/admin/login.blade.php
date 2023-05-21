@@ -11,8 +11,7 @@
 
     <!-- ===== CSS ===== -->
     <link rel="stylesheet" href="/css/admin/login.css">
-         
-    <!--<title>Login & Registration Form</title>-->
+    <title>Admin panelga kirish</title>
 </head>
 <body>
     
@@ -37,6 +36,12 @@
                         @enderror
                     </div>
                     @csrf
+                    @if (session()->has('error'))
+                        <p class="text" style="padding-top:10px; color:red;">
+                            {{ session('error') }}
+                        </p>
+                    @endif
+
                     <div class="input-field button">
                         <button type="submit">Kirish</button>
                     </div>
