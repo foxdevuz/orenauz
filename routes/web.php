@@ -12,3 +12,4 @@ Route::get('/news/{post:slug}', [PostController::class, 'show']);
 Route::get('/category/{category:name}', [CategoryController::class, 'post']);
 Route::get('/admin', [AdminController::class, 'index'])->name('admin');
 Route::post('/login', [AdminController::class, 'login']);
+Route::get('/admin/dashboard', [AdminController::class, 'dashboard'])->middleware('admins');

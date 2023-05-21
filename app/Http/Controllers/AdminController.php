@@ -30,10 +30,15 @@ class AdminController extends Controller
                     ->first();
                             
             if($admin && Hash::check($password, $admin->password)){
+                session(['admin_successfully_logged' => $admin->temporary_token]);
                 return redirect('/admin/dashboard');
             }
             return back()->with('error','Login yoki parol xato. Iltimos qayta urunib ko\'ring');
         }
 
+    }
+    public function dashboard()
+    {
+        return "Hello world";
     }
 }

@@ -2,12 +2,12 @@
 
 namespace App\Http\Middleware;
 
+use App\Models\Admin;
 use Closure;
 use Illuminate\Http\Request;
-use Illuminate\Http\Response as HttpResponse;
 use Symfony\Component\HttpFoundation\Response;
 
-class AdminOnly
+class AdminSession
 {
     /**
      * Handle an incoming request.
@@ -16,8 +16,14 @@ class AdminOnly
      */
     public function handle(Request $request, Closure $next): Response
     {
-        if(auth()->user()->username !== 'adminorena'){
-            abort(HttpResponse::HTTP_FORBIDDEN);
+        if(session('admin_successfully_logged')){
+            $admin = Admin::select('temporary_token')->first();
+            $session_token = session('admin_successfully_logged');
+            if($admin && $admin->temporary_token !== $session_token){
+                return redirect("/admin");
+            }
+        } else {
+            return redirect("/admin");
         }
         return $next($request);
     }
