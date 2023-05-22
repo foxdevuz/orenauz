@@ -13,3 +13,4 @@ Route::get('/admin', [AdminController::class, 'index'])->name('admin')->middlewa
 Route::get('/admin/dashboard', [AdminController::class, 'dashboard'])->middleware('admins');
 // for post 
 Route::post('/login', [AdminController::class, 'login']);
+Route::post('/admin/news-add',[AdminController::class, 'addNews'])->middleware('admins');
