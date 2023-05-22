@@ -39,6 +39,6 @@ class AdminController extends Controller
     }
     public function dashboard()
     {
-        return "Hello world";
+        return view('admin.index');
     }
 }
