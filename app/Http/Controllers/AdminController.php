@@ -65,14 +65,14 @@ class AdminController extends Controller
             $slug = implode("-",$exp); // result be like: hello-world-it's-just-text
             #making slug finished
             $image = $request->file('media');
-            $uniqueImageName = Str::random(15) . "." . $image->getClientOriginalExtension();
-            $image->storeAs('images', $uniqueImageName);
+            $image->store('public/images');
+            // $image->store('images');
             Post::create([
                 'name' => request('title'),
                 'slug' => $slug,
                 'category' =>request('category'),
                 'description' => request('description'),
-                'image' => $uniqueImageName,
+                'image' => $image->hashName(),
                 'view' => 0
             ]);
 
