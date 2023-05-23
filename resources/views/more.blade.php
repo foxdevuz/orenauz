@@ -1,9 +1,13 @@
 <x-main.main-header>
     <x-extra.section-title class="my-3">{{ $post->name }}</x-extra.section-title>
     <x-extra.time>{{ $post->created_at->format('d/m/Y H:s') }}</x-extra.time>
-    <img src="/images/testImage.jpg" alt="News Image" class="more-news-image">
+    @if ($post->image)
+        <img src="/storage/images/{{ $post->image }}" alt="News Image" class="more-news-image">
+    @else
+        <img src="/images/testImage.jpg" alt="News Image" class="more-news-image">
+    @endif
     <x-extra.more-about-news> 
-        {{ $post->description }}    
+        {!! $post->description !!}
     </x-extra.more-about-news>
     <div class="extra-more">
         <div class="view">

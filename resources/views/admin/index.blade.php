@@ -18,7 +18,7 @@
       <label for="news-category" class="form-label mt-3">Kategoriya</label>
       <select name="category" id="news-category" class="form-select ">
         @foreach ($categories as $category)
-          <option value="{{ $category->slug }}" class="text-dark">{{ $category->name }}</option>
+          <option value="{{ $category->name }}" class="text-dark">{{ $category->name }}</option>
         @endforeach
       </select>
       
