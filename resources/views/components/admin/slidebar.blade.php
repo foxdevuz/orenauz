@@ -41,6 +41,12 @@
               <ul data-bs-target="#dashboards" id="dashboards" class="sidebar-dropdown list-unstyled collapse">
                 <li class="sidebar-item"><a class="sidebar-link" href="/admin/dashboard">Asosiy</a></li>
               </ul>
+              <ul data-bs-target="#dashboards" id="dashboards" class="sidebar-dropdown list-unstyled collapse">
+                <li class="sidebar-item"><a class="sidebar-link" href="/admin/category">Categoriyalar</a></li>
+              </ul>
+              <ul data-bs-target="#dashboards" id="dashboards" class="sidebar-dropdown list-unstyled collapse">
+                <li class="sidebar-item"><a class="sidebar-link" href="/admin/posts">Postlar</a></li>
+              </ul>
             </li>
           </ul>
         </nav>

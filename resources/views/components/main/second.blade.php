@@ -2,10 +2,10 @@
 <div class="second">
     <div class="live">
         <div class="images">
-            <img src="/images/testImage.jpg" alt="News image" class="w-100 item-1">
+            <img src="/storage/images/{{ $posts[7]->image }}" alt="News image" class="w-100 item-1">
             <div class="extra-imaes">
-                <img src="/images/testImage.jpg" alt="News image" class="w-100">
-                <img src="/images/testImage.jpg" alt="News image" class="w-100">
+                <img src="/storage/images/{{ $posts[7]->image }}" alt="News image" class="w-100">
+                <img src="/storage/images/{{ $posts[7]->image }}" alt="News image" class="w-100">
             </div>
         </div>
         <div class="body">

@@ -12,5 +12,5 @@ class Category extends Model
     {
         return $this->hasMany(Post::class);
     }
-    protected $guarded = [];
+    protected $guarded = ['id'];
 }

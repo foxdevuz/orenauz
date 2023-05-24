@@ -18,7 +18,7 @@ class PostFactory extends Factory
     public function definition(): array
     {
         return [
-            'name'=>fake()->paragraph(),
+            'name'=>fake()->words(),
             'slug'=>fake()->slug(),
             'category'=> Category::factory()->create()->name,
             'description'=>fake()->text(),

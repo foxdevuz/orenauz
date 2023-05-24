@@ -4,7 +4,7 @@
     <x-main.swipper :posts="$post"/>
     <div class="item lastest">
         <x-extra.section-title>So'ngi</x-extra.section-title>
-        <img src="/images/testImage.jpg" alt="News Image">
+        <img src="/storage/images/{{ $post[0]->image }}" alt="News Image">
         <p class="pt-3"> <i class="fa-regular fa-calendar"></i> {{ $post[0]->created_at->format("d/m/Y") }}</p>
         <x-extra.news-title :link="$post[0]->slug">{{ Str::limit($post[0]->name, 100,) }}</x-extra.news-title>
         <x-extra.news-little-text>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatum, odio. Dolores laudantium ipsum placeat nesciunt delectus iure explicabo facere qui.</x-extra.news-little-text>

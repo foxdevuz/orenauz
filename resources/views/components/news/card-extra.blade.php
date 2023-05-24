@@ -12,6 +12,6 @@
         </p>
     </div>
     <div class="image">
-        <img src="/images/testImage.jpg" alt="News Image">
+        <img src="/storage/images/{{ $post->image }}" alt="News Image">
     </div>
 </div>  
