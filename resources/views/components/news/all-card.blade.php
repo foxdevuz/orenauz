@@ -9,7 +9,7 @@
             <x-extra.time>{{ $posts->created_at->format('d/m/y') }}</x-extra.time>
         </div>
         <x-extra.news-title style="font-size: 1.4rem;" :link="$posts->slug">{{ Str::limit($posts->name, 70) }}</x-extra.news-title>
-        <x-extra.news-little-text class="fs-6">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe ducimus quae aspernatur, omnis porro officia autem provident doloremque</x-extra.news-little-text>
+        <x-extra.news-little-text class="fs-6">{!! Str::limit($posts->description, 40, '...') !!}</x-extra.news-little-text>
         <p class="more">
             <a href="/news/{{ $posts->slug }}">Ko'proq o'qish</a>
         </p>

@@ -61,6 +61,7 @@ $red: #E13300;
             display: flex;
             align-items: center;
             margin-left: 20px;
+            width: 6%;
             i:nth-child(1) {
                 margin:0 8px 0 0;
                 display: none;
@@ -245,9 +246,19 @@ $red: #E13300;
 .all-card {
     .image {
         width: 100%;
+        height: 230px;
+        overflow: hidden;
         img {
+            transition: all 0.3s ease;
             width: 100%;
+            height: 100%;
         }
+    }
+    .image:hover {
+        img {
+            transform: scale(1.1);
+        }
+        cursor: pointer;
     }
     .top {
        display: flex;

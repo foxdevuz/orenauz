@@ -7,7 +7,7 @@
     </div>
     <div class="card-body">
         <x-extra.news-title style="font-size: 1.3rem;" :link="$post->slug">{{ Str::limit($post->name, '30') }}</x-extra.news-title>
-        <x-extra.news-little-text class="pt-1">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sapiente necessitatibus eligendi</x-extra.news-little-text>
+        <x-extra.news-little-text class="pt-1">{!! Str::limit($post->description, 40, '...') !!}</x-extra.news-little-text>
         <p class="more">
             <a href="/news/{{ $post->slug }}">Ko'proq o'qish</a>
         </p>
