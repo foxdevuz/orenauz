@@ -1,3 +1,4 @@
+@props(['categories'])  
 <!DOCTYPE html>
 <html lang="en">
 
@@ -25,7 +26,7 @@
 
     <body>
         {{-- start header --}}
-        <x-main.header/>
+        <x-main.header :categories="$categories"/>
         <div class="container-lg">
             {{ $slot }}
         </div>

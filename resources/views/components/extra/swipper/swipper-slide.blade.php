@@ -1,7 +1,7 @@
 @props(['post'])
 <div class="swiper-slide">
     <x-extra.backdrop/>
-    <img src="/images/testImage.jpg" class="swipper_image" alt="">
+    <img src="/storage/images/{{ $post->image }}" class="swipper_image" alt="">
     <span class="content_text">
         <x-extra.news-title class="extra-for-titile" :link="$post->slug">{{ Str::limit($post->name, 46) }}</x-extra.news-title>
         <p class="more extra-for-more-read">

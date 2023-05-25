@@ -10,7 +10,12 @@
 a {
     text-decoration: none;
 }
-
+img {
+    border-radius: 5px;
+}
+img:hover {
+    border-radius: 5px;
+}
 span.line_bottom_nav {
     display: block;
     width: 100%;
@@ -231,7 +236,9 @@ $red: #E13300;
         }
         .image {
             width: 40%;
+            height: 170px;
             img {
+                height: 100%;
                 width: 100%;
             }
         }
@@ -240,7 +247,7 @@ $red: #E13300;
 // all
 .all {
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: 33% 33% 33%;
     gap: 20px;
 }
 .all-card {
@@ -248,15 +255,18 @@ $red: #E13300;
         width: 100%;
         height: 230px;
         overflow: hidden;
+        border-radius: 5px;
         img {
             transition: all 0.3s ease;
             width: 100%;
             height: 100%;
+            border-radius: 5px;
         }
     }
     .image:hover {
         img {
             transform: scale(1.1);
+            border-radius: 5px;
         }
         cursor: pointer;
     }
@@ -360,7 +370,9 @@ footer {
     }
     .logo-section {
         .icons {
+            width: 6%;
             .search {
+                width: max-content;
                 i:nth-child(1) {
                     margin:0 8px 0 0;
                     display: block;

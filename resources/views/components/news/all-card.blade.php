@@ -1,7 +1,7 @@
 @props(['posts'])
 <div class="all-card">
     <div class="image">
-        <img src="/storage/images/{{ $posts->image }}" alt="News Image">
+        <a href="/news/{{ $posts->slug }}"><img src="/storage/images/{{ $posts->image }}" alt="News Image"></a>
     </div>
     <div class="body">
         <div class="top">

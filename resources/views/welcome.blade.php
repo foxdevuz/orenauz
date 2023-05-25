@@ -1,4 +1,4 @@
-<x-main.main-header>
+<x-main.main-header :categories="$categories">
     @if (count($posts)>10)
         <x-main.main-section :post="$posts"/> 
         <x-main.second :posts="$posts_for_second"/>

@@ -1,13 +1,17 @@
 @props(['post'])
-{{-- {{ dd($post->slug) }} --}}
 <div class="main-section">
     <x-main.swipper :posts="$post"/>
     <div class="item lastest">
         <x-extra.section-title>So'ngi</x-extra.section-title>
+
         <img src="/storage/images/{{ $post[0]->image }}" alt="News Image">
+
         <p class="pt-3"> <i class="fa-regular fa-calendar"></i> {{ $post[0]->created_at->format("d/m/Y") }}</p>
-        <x-extra.news-title :link="$post[0]->slug">{{ Str::limit($post[0]->name, 100,) }}</x-extra.news-title>
+        
+        <x-extra.news-title :link="$post[0]->slug">{{ Str::limit($post[0]->name, 300,) }}</x-extra.news-title>
+        
         <x-extra.news-little-text>{!! Str::limit($post[0]->description, 40, '...') !!}</x-extra.news-little-text>
+        
         <a href="/news/{{ $post[0]->slug }}">Ko'proq o'qish</a>
     </div>
 

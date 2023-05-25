@@ -1,3 +1,4 @@
+@props(['categories'])
 <header>
     <nav class="logo-section">
         <div class="icons">
@@ -9,9 +10,6 @@
                 <i class="fa-solid fa-sun" id="ligth"></i>
                 <i class="fa-solid fa-moon" id="dark"></i>
             </div>
-            <div class="red_naw">
-                
-            </div>
         </div>
         <div class="logo">
             <a href="/"><img src="/images/logo.png" alt="Logo"></a>
@@ -20,9 +18,10 @@
     <nav style="margin-bottom:0px;">
         <ul class="nav-items">
             <li><a href="/">Asosiy bo'lim</a></li>
-            <li><a href="#">Biznes</a></li>
-            <li><a href="#">Texnalogiyalar</a></li>
-            <li><a href="#">Insayder</a></li>
+
+            @foreach ($categories as $category)
+              <li><a href="/category/{{ $category->slug }}">{{ $category->name }}</a></li>
+            @endforeach
         </ul>
     </nav>
     <span class="line_bottom_nav"></span>
@@ -35,10 +34,10 @@
         </div>
         <div class="offcanvas-body">
           <ul class="offcanvas-nav-items">
-            <li><a class="offcanvas-nav-item" href="#">Asosiy bo'lim</a></li>
-            <li><a class="offcanvas-nav-item" href="#">Biznes</a></li>
-            <li><a class="offcanvas-nav-item" href="#">Texnalogiyalar</a></li>
-            <li><a class="offcanvas-nav-item" href="#">Insayder</a></li>
+            <li><a class="offcanvas-nav-item" href="/">Asosiy bo'lim</a></li>
+            @foreach ($categories as $category)
+              <li><a class="offcanvas-nav-item" href="/category/{{ $category->slug }}">{{ $category->name }}</a></li>
+            @endforeach
           </ul>
           <div class="social-media">
             <span><i class="fa-brands fa-telegram"></i></span>
