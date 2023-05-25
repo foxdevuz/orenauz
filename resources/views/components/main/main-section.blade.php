@@ -1,23 +1,23 @@
-@props(['post'])
+@props(['post', 'popularPosts', 'breakingNews'])
 <div class="main-section">
-    <x-main.swipper :posts="$post"/>
+    <x-main.swipper :posts="$breakingNews"/>
     <div class="item lastest">
         <x-extra.section-title>So'ngi</x-extra.section-title>
 
-        <img src="/storage/images/{{ $post[0]->image }}" alt="News Image">
+        <img src="/storage/images/{{ $post->image }}" alt="News Image">
 
-        <p class="pt-3"> <i class="fa-regular fa-calendar"></i> {{ $post[0]->created_at->format("d/m/Y") }}</p>
+        <p class="pt-3"> <i class="fa-regular fa-calendar"></i> {{ $post->created_at->format("d/m/Y") }}</p>
         
-        <x-extra.news-title :link="$post[0]->slug">{{ Str::limit($post[0]->name, 300,) }}</x-extra.news-title>
+        <x-extra.news-title :link="$post->slug">{{ Str::limit($post->name, 300,) }}</x-extra.news-title>
         
-        <x-extra.news-little-text>{!! Str::limit($post[0]->description, 40, '...') !!}</x-extra.news-little-text>
+        <x-extra.news-little-text>{!! Str::limit($post->description, 40, '...') !!}</x-extra.news-little-text>
         
-        <a href="/news/{{ $post[0]->slug }}">Ko'proq o'qish</a>
+        <a href="/news/{{ $post->slug }}">Ko'proq o'qish</a>
     </div>
 
     <div class="item fast">
         <x-extra.section-title>Tezkor</x-extra.section-title>
-        @foreach ($post->skip(1) as $posts)
+        @foreach ($breakingNews as $posts)
             <x-news.fast-card :post="$posts"/>
             @if($loop->iteration == 3)
                 @break
@@ -26,13 +26,8 @@
     </div>
     <div class="item popular">
         <x-extra.section-title>Mashxur</x-extra.section-title>
-        @foreach ($post as $key => $value)
-            @if ($key >= 5)
-                <x-news.popular-news-card :post="$value"/>
-            @endif
-            @if($loop->iteration == 8)
-                @break
-            @endif
+        @foreach ($popularPosts as $post)
+                <x-news.popular-news-card :post="$post"/>
         @endforeach
     </div>
 </div>

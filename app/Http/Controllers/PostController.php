@@ -11,10 +11,12 @@ class PostController extends Controller
     public function index()
     {
         return view('welcome', [
-            'posts'=> Post::orderByDesc('id')->get(),
-            'posts_for_second'=>Post::all()->slice(7),
-            'all_posts'=>Post::orderByDesc('id')->get(),
-            'categories'=>Category::all()
+            'latest'=> Post::latest()->first(), # post for first news
+            'breakingNews'=>Post::orderByDesc('id')->skip(1)->take(3)->get(), # posts for 'Tezkor'
+            'popularPosts'=>Post::orderBydesc('view')->take(3)->get(), # posts for 'Mashxur'
+            'second'=>Post::skip(7)->take(3)->get(), #posts for <x-main.second"/>
+            'allPosts'=>Post::inRandomOrder()->get(),
+            'categories'=>Category::all(),
         ]);
     }
 

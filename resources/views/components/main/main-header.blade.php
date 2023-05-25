@@ -22,6 +22,21 @@
 
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
         <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+        <style>
+            body::-webkit-scrollbar {
+                width: 5px;
+            }
+            
+            body::-webkit-scrollbar-track {
+                -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+            }
+            
+            body::-webkit-scrollbar-thumb {
+                border-radius: 5px;
+                background: linear-gradient(180deg, rgba(11,32,51,1) 0%, rgba(11,32,51,0.8127626050420168) 100%);
+                
+            }
+        </style>
     </head>
 
     <body>
@@ -30,8 +45,8 @@
             <form action="/search" method="get">
                 <input type="search" name="query" id="search" placeholder="Saytdan qidirish" active required>
                 <button type="submit">Qidirish</button>
-                <button class="closeSearchForm">Yopish</button>
             </form>
+            <span class="closeSearchForm"><i class="fa-solid fa-x"></i></span>
         </div>
         {{-- start header --}}
         <x-main.header :categories="$categories"/>
