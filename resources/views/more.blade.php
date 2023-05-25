@@ -24,14 +24,11 @@
             </ul>
           </div>
     </div>
-    <a href="#" class="view-tg">Telegram orqali kuzatish</a>
+    <a href="https://t.me/orenauz" target="_blank" class="view-tg">Telegram orqali kuzatish</a>
     <x-extra.section-title>Tavsiya etamiz:</x-extra.section-title>
     <div class="all">
         @foreach ($latest as $post)
             <x-news.all-card :posts="$post"/>
-            @if ($loop->iteration == 3)
-                @break
-            @endif
         @endforeach
     </div>
 </x-main.main-header>

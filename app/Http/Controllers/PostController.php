@@ -24,7 +24,7 @@ class PostController extends Controller
     {
         return view('more', [
             'post'=>$post,
-            'latest'=>Post::orderByDesc('id')->get(),
+            'latest'=>Post::inRandomOrder()->take(3)->get(),
             'categories'=>Category::all()
         ]);
     }

@@ -63,8 +63,8 @@ class AdminController extends Controller
 
         try {
             #make slug
-            $exp = explode(" ", request('title'));
-            $slug = implode("-",$exp); // result be like: hello-world-it's-just-text
+            $slug = preg_replace('/[^a-zA-Z0-9\-]+/', '-', request('title'));
+            // result be like: hello-world-it-s-just-text
             #making slug finished
             $image = $request->file('media');
             $image->store('public/images');
@@ -98,8 +98,7 @@ class AdminController extends Controller
         if(!$category){
             try {
                 // make slug for category
-                $explode = explode(" ", request('category'));
-                $slug = implode("-", $explode);
+                $slug = preg_replace('/[^a-zA-Z0-9\-]+/', '-', request('category'));
                 // end making slug
                 Category::create([
                     'name'=>request()->category,
