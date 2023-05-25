@@ -25,6 +25,14 @@
     </head>
 
     <body>
+         {{-- search form  --}}
+        <div class="searchForm">
+            <form action="/search" method="get">
+                <input type="search" name="query" id="search" placeholder="Saytdan qidirish" active required>
+                <button type="submit">Qidirish</button>
+                <button class="closeSearchForm">Yopish</button>
+            </form>
+        </div>
         {{-- start header --}}
         <x-main.header :categories="$categories"/>
         <div class="container-lg">

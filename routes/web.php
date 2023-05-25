@@ -8,6 +8,8 @@ use Illuminate\Support\Facades\Route;
 // main
 Route::get('/', [PostController::class, 'index'])->name('home');
 Route::get('/news/{post:slug}', [PostController::class, 'show']);
+// search
+Route::get('/search', [PostController::class, 'search']);
 // admin section
 Route::get('/category/{category:name}', [CategoryController::class, 'post']);
 Route::get('/admin', [AdminController::class, 'index'])->name('admin')->middleware('admin_logged');

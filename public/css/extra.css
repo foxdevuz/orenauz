@@ -20,3 +20,52 @@
 .nav-itm-dark {
     color: #000 !important;
 }
+/* search */
+.searchForm {
+    transition: all 0.3s ;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #080808e1;
+    display: none;
+}
+.searchForm form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.searchForm form input {
+    background: none;
+    border: none;
+    border-bottom: 2px solid #0085D0;
+    outline: none;
+    color: #fff;
+    width: 215px;
+}
+.searchForm form input::placeholder {
+    color: #fff;
+}
+.searchForm form button {
+    background-color: #0085D0;
+    border-radius: 5px;
+    padding: 3px 5px;
+    color: #fff;
+    border: none;
+    width: 80px;
+}
+.closeSearchForm {
+    background-color: #ff605c !important;
+    color: #fff;
+}
+
+/* class for show searchForm */
+.searchFormShow {
+    display: block;
+    transition: all 0.3s ;
+}
+.stopScroll {
+    overflow: hidden;
+}

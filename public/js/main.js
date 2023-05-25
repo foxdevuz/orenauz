@@ -5,7 +5,20 @@ let lightThemeIcon = document.querySelector(".fa-sun");
 let offcanvasBody = document.querySelector(".offcanvas-body");
 let offcanvasHeader = document.querySelector(".offcanvas-header");
 let offcanvasNavItem = document.querySelectorAll(".offcanvas-nav-item");
+let searchForm = document.querySelector(".searchForm");
+let closeSearchForm = document.querySelector(".closeSearchForm");
+let searchIcon = document.querySelector("#searchicon");
 let body = document.querySelector("body");
+searchIcon.addEventListener("click", ()=>{
+    searchForm.classList.add('searchFormShow');
+    body.classList.add('stopScroll');
+});
+closeSearchForm.addEventListener('click', ()=>{
+    searchForm.classList.remove('searchFormShow');
+    body.classList.remove('stopScroll');
+})
+
+
 
 darkThemeIcon.addEventListener("click", ()=> {
     localStorage.setItem('dark-theme-orena', true);
@@ -85,4 +98,3 @@ let swiper = new Swiper(".mySwiper", {
         prevEl: ".swiper-button-prev",
     },
 });
-

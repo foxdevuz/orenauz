@@ -4,7 +4,7 @@
         <div class="icons">
             <div class="search">
                 <i class="fa-solid fa-bars" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample"></i>
-                <i class="fa-solid fa-magnifying-glass"></i>
+                <i class="fa-solid fa-magnifying-glass" id="searchicon"></i>
             </div>
             <div class="theme">
                 <i class="fa-solid fa-sun" id="ligth"></i>
