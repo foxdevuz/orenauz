@@ -10,9 +10,8 @@ use Illuminate\Support\Facades\DB;
 
 class PostController extends Controller
 {
-    public function index()
-    {   
-        $expTime = now()->addMinutes(10);
+    public function index(){   
+        $expTime = now()->addHours(5);
         // cache latest
         if(Cache::has('latest')){
             $latest = Cache::get('latest');
@@ -71,25 +70,35 @@ class PostController extends Controller
             'categories'=>$categories,
         ]);
     }
-
-    public function show(Post $post)
-    {
+    public function show(Post $post){
+        // check cache and if there is no increase view number
+        if (Cache::has('last_view')) {
+            $lastVisitedNews = Cache::get('last_view');
+            if($lastVisitedNews != $post->slug){
+                $post->view = $post->view + 1;
+                $post->save();
+                Cache::put('last_view', $post->slug, 5*60);
+            }
+            
+        } else {
+            $post->view = $post->view + 1;
+            $post->save();
+            Cache::put('last_view', $post->slug, 5*60);
+        }
         return view('more', [
             'post'=>$post,
             'latest'=>Post::inRandomOrder()->take(3)->get(),
             'categories'=>Category::all()
         ]);
     }
-    public function category($slug)
-    {
+    public function category($slug){
         $post = Post::where('category','=',$slug)->orderByDesc('id')->get();
         return view('category', [
             'categories'=>Category::all(),
             'posts'=>$post
         ]);
     }
-    public function search(Request $request)
-    {
+    public function search(Request $request){
         $query = $request->query('query');
         $post = Post::where('name','like','%'.$query.'%')
                     ->orWhere('description','like','%'.$query.'%')

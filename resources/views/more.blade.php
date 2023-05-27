@@ -1,3 +1,4 @@
+{{-- {{ dd($post->view) }} --}}
 <x-main.main-header :categories="$categories">
     <x-extra.section-title class="my-3">{{ $post->name }}</x-extra.section-title>
     <x-extra.time>{{ $post->created_at->format('d/m/Y H:s') }}</x-extra.time>
