@@ -36,6 +36,10 @@
                 background: linear-gradient(180deg, rgba(11,32,51,1) 0%, rgba(11,32,51,0.8127626050420168) 100%);
                 
             }
+            .second .card-extra .image {
+                /* width: 40%; */
+                height: 170px;
+            }
         </style>
     </head>
 

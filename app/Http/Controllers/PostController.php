@@ -49,7 +49,7 @@ class PostController extends Controller
             $allPosts = Cache::get('allPosts');
         } else {
             $allPosts = Cache::remember('allPosts', $expTime, function () {
-                return Post::inRandomOrder()->get();
+                return Post::inRandomOrder()->paginate(10);
             });
         }
         // cache for categories
@@ -66,7 +66,7 @@ class PostController extends Controller
             'breakingNews'=>$breakingNews, # posts for 'Tezkor'
             'popularPosts'=>$popularPosts, # posts for 'Mashxur'
             'second'=>$second, #posts for <x-main.second"/>
-            'allPosts'=>$allPosts,
+            'allPosts'=>Post::inRandomOrder()->paginate(10),
             'categories'=>$categories,
         ]);
     }
@@ -88,11 +88,11 @@ class PostController extends Controller
         return view('more', [
             'post'=>$post,
             'latest'=>Post::inRandomOrder()->take(3)->get(),
-            'categories'=>Category::all()
+            'categories'=>Category::all(),
         ]);
     }
     public function category($slug){
-        $post = Post::where('category','=',$slug)->orderByDesc('id')->get();
+        $post = Post::where('category','=',$slug)->orderByDesc('id')->paginate(10);
         return view('category', [
             'categories'=>Category::all(),
             'posts'=>$post
@@ -102,7 +102,7 @@ class PostController extends Controller
         $query = $request->query('query');
         $post = Post::where('name','like','%'.$query.'%')
                     ->orWhere('description','like','%'.$query.'%')
-                    ->get();
+                    ->paginate(10);
         return view('search',[
             'categories'=>Category::all(),
             'result'=>$post

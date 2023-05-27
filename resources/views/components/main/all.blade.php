@@ -1,6 +1,7 @@
 @props(['posts'])
 <div {{ $attributes->merge(['class'=>'all']) }}>
-    @foreach ($posts as $key => $post)
-        <x-news.all-card :posts="$post"/>        
+    @foreach ($posts as $post)
+        <x-news.all-card :posts="$post"/> 
     @endforeach
-</div>
+</div> 
+{{  $posts->links('vendor.pagination.bootstrap-5')  }}
