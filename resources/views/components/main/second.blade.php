@@ -1,4 +1,5 @@
 @props(['posts'])
+{{-- {{ dd($posts) }} --}}
 <div class="second">
     <div class="live">
         <div class="images">
