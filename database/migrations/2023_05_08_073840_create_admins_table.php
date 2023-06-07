@@ -22,16 +22,6 @@ return new class extends Migration
             $table->text("temporary_token")->unique();
             $table->timestamps();
         });
-
-        $pass = "orenauz#admin";
-        $hashPass = Hash::make($pass);
-        $token = Str::random(30);
-        Admin::create([
-            'name'=> 'OrenaUz Admin',
-            'password'=>$hashPass,
-            'username'=>"orena-admins",
-            'temporary_token'=>$token
-        ]);
     }
 
     /**
